@@ -14,7 +14,9 @@ public class App {
 	public static void main(String[] args) {
 		Double difference = readDifference(args);
 		List<Row> dataToAnalysis = CsvFileReader.readFile();
-		DataAnalyst.analyze(dataToAnalysis, difference);
+		DataAnalyst da = new DataAnalyst();
+		da.analyze(dataToAnalysis, difference);
+		System.out.println("exit");
 	}
 
 	private static Double readDifference(String[] args) {

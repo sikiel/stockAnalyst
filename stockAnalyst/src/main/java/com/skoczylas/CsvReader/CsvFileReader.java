@@ -18,7 +18,7 @@ public class CsvFileReader {
 		     while ((nextLine = reader.readNext()) != null) {
 		        // nextLine[] is an array of values from the line
 		    	 rows.add(new Row(Double.valueOf(nextLine[3]), Double.valueOf(nextLine[4])));
-		        //System.out.println("Adding Row HIGH: " + nextLine[3] +" LOW: " +nextLine[4]);
+		        //System.out.println("Adding Row HIGH: " + Double.valueOf(nextLine[3]) +" LOW: " +Float.valueOf(nextLine[4]));
 		     }
 		     reader.close();
 		} catch (FileNotFoundException e) {
